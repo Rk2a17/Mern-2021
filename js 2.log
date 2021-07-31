@@ -1,0 +1,184 @@
+function add(){}
+undefined
+function add(){
+console.log("add", arguments.length)}
+undefined
+add(10,20);
+VM6219:2 add 2
+undefined
+function add(...arg){
+console.log(arg)
+}
+undefined
+add(10,20,30)
+VM6390:2 (3) [10, 20, 30]
+undefined
+var arr = [10,20,30,40]
+undefined
+var arr2 = [100,200,300];
+undefined
+var arr3 = [arr, arr2]
+undefined
+arr3
+(2) [Array(4), Array(3)]0: (4) [10, 20, 30, 40]1: (3) [100, 200, 300]length: 2[[Prototype]]: Array(0)
+arr3[0][1]
+20
+var arr3 = [...arr, ...arr2];
+undefined
+arr3
+(7) [10, 20, 30, 40, 100, 200, 300]
+arr3[0] = 10000;
+10000
+arr3
+(7) [10000, 20, 30, 40, 100, 200, 300]
+var obj = {id:1001, name: 'Rohit'};
+undefined
+var obj2 = obj;
+undefined
+obj2
+{id: 1001, name: "Rohit"}
+obj.id = 1000
+1000
+obj2
+{id: 1000, name: "Rohit"}
+var obj3 = {..obj};
+VM6976:1 Uncaught SyntaxError: Unexpected token '.'
+var obj3 = {...obj};
+undefined
+obj3;
+{id: 1000, name: "Rohit"}
+obj3.id = 999
+999
+obj
+{id: 1000, name: "Rohit"}
+obj3;
+{id: 999, name: "Rohit"}
+obj;
+{id: 1000, name: "Rohit"}
+var obj2 = {id: 1002 , course: 'JS' , city: 'Delhi'}
+undefined
+var obj3 = {...obj, ...obj2}
+undefined
+obj3
+{id: 1002, name: "Rohit", course: "JS", city: "Delhi"}
+var obj4 = {address: 'India', detail: obj3};
+undefined
+obj4
+{address: "India", detail: {…}}address: "India"detail: {id: 1002, name: "Rohit", course: "JS", city: "Delhi"}[[Prototype]]: Object
+var obj5 = {...obj4};
+undefined
+obj5
+{address: "India", detail: {…}}address: "India"detail: {id: 1002, name: "Rohit", course: "JS", city: "Delhi"}[[Prototype]]: Object
+obj3;
+{id: 1002, name: "Rohit", course: "JS", city: "Delhi"}
+obj3.city = "Mumbai";
+"Mumbai"
+obj5
+{address: "India", detail: {…}}address: "India"detail: {id: 1002, name: "Rohit", course: "JS", city: "Mumbai"}[[Prototype]]: Object
+typeof JSON
+"object"
+JSON.stringify(obj3);
+"{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"
+obj5
+{address: "India", detail: {…}}address: "India"detail: {id: 1002, name: "Rohit", course: "JS", city: "Mumbai"}[[Prototype]]: Object
+var obj6 = {address:"Delhi", detail: JSON.stringify(obj3)}
+undefined
+obj6
+{address: "Delhi", detail: "{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"}address: "Delhi"detail: "{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"[[Prototype]]: Object
+var obj7 = {...obj6};
+undefined
+obj7
+{address: "Delhi", detail: "{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"}
+var str = JSON.stringify(obj3)
+undefined
+typeof str
+"string"
+str
+"{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"
+var r = JSON.parse(str);
+undefined
+r
+{id: 1002, name: "Rohit", course: "JS", city: "Mumbai"}
+var rr = JSON.parse(obj7);
+VM8035:1 Uncaught SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:15
+(anonymous) @ VM8034:1
+var rr = obj7
+undefined
+rr
+{address: "Delhi", detail: "{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"}
+var e1 = JSON.stringify(obj7)
+undefined
+e1
+"{\"address\":\"Delhi\",\"detail\":\"{\\\"id\\\":1002,\\\"name\\\":\\\"Rohit\\\",\\\"course\\\":\\\"JS\\\",\\\"city\\\":\\\"Mumbai\\\"}\"}"
+var e2 = JSON.parse(e1)
+undefined
+e2
+{address: "Delhi", detail: "{\"id\":1002,\"name\":\"Rohit\",\"course\":\"JS\",\"city\":\"Mumbai\"}"}
+var arr = [1,2,3,[4,5,6]]
+undefined
+arr
+(4) [1, 2, 3, Array(3)]0: 11: 22: 33: (3) [4, 5, 6]length: 4[[Prototype]]: Array(0)
+var gg = [...arr]
+undefined
+gg
+(4) [1, 2, 3, Array(3)]
+var arr = [1,2,3,...[4,5,6]]
+undefined
+arr
+(6) [1, 2, 3, 4, 5, 6]
+var gg = [...arr]
+undefined
+gg
+(6) [1, 2, 3, 4, 5, 6]
+var [x,y,z,,m] = gg;
+undefined
+x
+1
+y
+2
+m
+5
+var [a,b] = [10,20]
+undefined
+a
+10
+b
+20
+[a,b] = [b,a]
+(2) [20, 10]
+a
+20
+b
+10
+obj
+{id: 1000, name: "Rohit"}
+var t = obj.id
+undefined
+var {id, name} = obj;
+undefined
+id
+1000
+name
+"Rohit"
+function print(){
+console.log(obj.id+" " + obj.name)}
+undefined
+obj
+{id: 1000, name: "Rohit"}
+print(obj)
+VM8906:2 1000 Rohit
+undefined
+function print(id, name){
+console.log(id + " " + name)}
+undefined
+print(obj)
+VM9060:2 [object Object] undefined
+undefined
+function print({id, name}){
+console.log(id + " " + name)}
+undefined
+print(obj)
+VM9116:2 1000 Rohit
+undefined
