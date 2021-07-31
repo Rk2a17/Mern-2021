@@ -1,0 +1,475 @@
+var i = "1000";
+undefined
+i
+"1000"
+typeof i
+"string"
+parseInt(i);
+1000
+typeof i
+"string"
+var e = parseInt(i);
+undefined
+e
+1000
+typeof e
+"number"
+a= "amit"
+"amit"
+typeof a 
+"string"
+parseInt("amit")
+NaN
+var e = parseInt("amit")
+undefined
+e
+NaN
+typeof e
+"number"
+isNaN(e);
+true
+isNaN(e)?0:e
+0
+a/1000;
+NaN
+e/1000
+NaN
+a= 1000;
+1000
+a/0;
+Infinity
+isFinite(a)?:a
+VM536:1 Uncaught SyntaxError: Unexpected token ':'
+isFinite(a);
+true
+a;
+1000
+var e = a/0;
+undefined
+e
+Infinity
+isFinite(e)?e:0
+0
+typeof e;
+"number"
+typeof parseInt;
+"function"
+a = "1000"
+"1000"
+e = Number(a);
+1000
+typeof e;
+"number"
+a = 100.28;
+100.28
+typeof a
+"number"
+parseFloat(a);
+100.28
+a = "100.28";
+"100.28"
+parseFloat(a);
+100.28
+var e = parseFloat(a);
+undefined
+e;
+100.28
+typeof e
+"number"
+typeof a 
+"string"
+a = "100.34";
+"100.34"
+typeof a;
+"string"
+e = Number(a);
+100.34
+typeof e;
+"number"
+typeof Number
+"function"
+var rr = 1000;
+undefined
+typeof rr;
+"number"
+r++;
+VM1297:1 Uncaught ReferenceError: r is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1297:1
+rr++;
+1000
+rr++;
+1001
+rr++;
+1002
+++rr;
+1004
+var g = new Number (1000);
+undefined
+g;
+Number {1000}[[Prototype]]: Number[[PrimitiveValue]]: 1000
+rr
+1004
+g.toString();
+"1000"
+var g = new Number (1000.34);
+undefined
+g
+Number {1000.34}
+g.toString();
+"1000.34"
+g.toPrecision;
+ƒ toPrecision() { [native code] }
+var g = new Number (1000.34);
+undefined
+g.toPrecision;
+ƒ toPrecision() { [native code] }
+var g = new Number (1000.34);
+undefined
+g.toPrecision();
+"1000.34"
+g.toFixed();
+"1000"
+typeof g;
+"object"
+typeof rr;
+"number"
+var r1 = [11,22,33];
+undefined
+typeof r1
+"object"
+g instanceof Number;
+true
+r1 instanceof Array;
+true
+var t = "Amit";
+undefined
+var t = "Ankita";
+undefined
+var t1 = new String("Ankita");
+undefined
+t;
+"Ankita"
+t1;
+String {"Ankita"}0: "A"1: "n"2: "k"3: "i"4: "t"5: "a"length: 6[[Prototype]]: String[[PrimitiveValue]]: "Ankita"
+typeof t
+"string"
+typeof t1
+"object"
+t1 instanceof String;
+true
+t1.length
+6
+t.length
+6
+t1.length
+6
+//
+undefined
+t.toUpperCase();
+"ANKITA"
+t;
+"Ankita"
+t1.toUpperCase;
+ƒ toUpperCase() { [native code] }
+t1.toUpperCase();
+"ANKITA"
+t1;
+String {"Ankita"}0: "A"1: "n"2: "k"3: "i"4: "t"5: "a"length: 6[[Prototype]]: String[[PrimitiveValue]]: "Ankita"
+var h = 1000
+undefined
+h.constructor
+ƒ Number() { [native code] }
+h.constructor();
+0
+var tt = [100,20, 30, 49];
+undefined
+tt;
+(4) [100, 20, 30, 49]
+var e1 = new Array(5);
+undefined
+e1
+(5) [empty × 5]
+var e1 = new Array([10], 5);
+undefined
+var e1 = new Array(5);
+undefined
+e1
+(5) [empty × 5]
+typeof tt
+"object"
+typeof e1;
+"object"
+typeof Array
+"function"
+typeof Number;
+"function"
+typeof String
+"function"
+typeof Array
+"function"
+function add(){}
+undefined
+function add(){
+console.log("I am Add")
+}
+undefined
+typeof add;
+"function"
+add();
+VM2917:2 I am Add
+undefined
+add(10, 20);
+VM2917:2 I am Add
+undefined
+add("Amit" , 10);
+VM2917:2 I am Add
+undefined
+console.dir(add);
+VM3072:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM2917:1[[Prototype]]: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()[[FunctionLocation]]: ​[[Prototype]]: Object[[Scopes]]: Scopes[0][[Scopes]]: Scopes[1]
+undefined
+function add(){
+console.log("I am Add" , arguments.length)
+}
+undefined
+add();
+VM3197:2 I am Add 0
+undefined
+add("Amit" , 10);
+VM3197:2 I am Add 2
+undefined
+function add(){
+for(var i = 0 ;i<arguments.length; i++){
+}
+}
+undefined
+function add(){
+for(var i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+}
+undefined
+console.dir(add);
+VM3497:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM3444:1[[Prototype]]: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()[[FunctionLocation]]: ​[[Prototype]]: Object[[Scopes]]: Scopes[0][[Scopes]]: Scopes[1]0: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+undefined
+function add(){
+console.log("I is" i);
+for(var i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+VM3602:2 Uncaught SyntaxError: missing ) after argument list
+function add(){
+console.log("I is",i);
+for(var i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+add();
+VM3609:2 I is undefined
+VM3609:6 I after Loop  0
+undefined
+function add(){
+console.log("I is",i);
+for(let i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+add();
+VM3651:2 I is 1000
+VM3651:6 I after Loop  1000
+undefined
+function add(){
+console.log("I is",i);
+for(let i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+add();
+VM3675:2 I is 1000
+VM3675:6 I after Loop  1000
+undefined
+function add(){
+console.log("I is",i);
+for(let i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+function add(){
+console.log("I is",i);
+for(var i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+add();
+VM3736:2 I is undefined
+VM3736:6 I after Loop  0
+undefined
+function add(){
+console.log("I is",i);
+for(let i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+console.log("I after Loop ",i);
+}
+undefined
+add();
+VM3777:2 I is 1000
+VM3777:6 I after Loop  1000
+undefined
+function add(){
+// console.log("I is",i);
+for(let i = 0 ;i<arguments.length; i++){
+console.log("Args", arguments[i])
+}
+// console.log("I after Loop ",i);
+}
+undefined
+add(10,200);
+VM3798:4 Args 10
+VM3798:4 Args 200
+undefined
+function add(){
+var sum = 0;
+for(let i = 0; i< arguments.length; i++){
+sum+=arguments[i]
+}
+return sum:
+}
+VM4048:6 Uncaught SyntaxError: Unexpected token ':'
+function add(){
+var sum = 0;
+for(let i = 0; i< arguments.length; i++){
+sum+=arguments[i]
+}
+return sum;
+}
+undefined
+add(10,20);
+30
+add(1,2,3,,4,5,6)
+VM4151:1 Uncaught SyntaxError: Unexpected token ','
+add(1,2,3,4,5,6)
+21
+add(1,2,3,"Ankita",4,5,6)
+"6Ankita456"
+add(1,2,3,4,5,6, "Ankita")
+"21Ankita"
+add(1,2,3,4,5,6,"100")
+"21100"
+21 + parseInt("100");
+121
+var g = [10,20,30];
+undefined
+"Anikta" + g
+"Anikta10,20,30"
+var g = {a:100, b:200};
+undefined
+"Ankita"  + g
+"Ankita[object Object]"
+g
+{a: 100, b: 200}
+function add(){
+var sum = 0;
+for(var i = 0; i< arguments.length; i++){
+sum+=arguments[i]
+}
+return sum;
+}
+undefined
+function add(){
+var sum = 0;
+for(var i = 0; i< arguments.length; i++){
+sum+=parseInt(arguments[i])
+}
+return sum;
+}
+undefined
+add(1,2,3,4,5,"6")
+21
+add(1,2,3,4,5,"Amit","6")
+NaN
+20 + NaN
+NaN
+function add(){
+var sum = 0;
+for(var i = 0; i< arguments.length; i++){
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(1,2,3,4,5,"Amit","6")
+21
+function firstNumber(){
+return 1000;
+}
+undefined
+function secondNumber(){
+return 2000;
+}
+undefined
+add( firstNumber, secondNumber);
+0
+var tt;
+undefined
+var tt = 1000;
+undefined
+typeof tt
+"number"
+tt = firstNumber();
+1000
+tt
+1000
+tt = secondNumber();
+2000
+tt = firstNumber;
+ƒ firstNumber(){
+return 1000;
+}
+typeof tt
+"function"
+add(firstNumber, secondNumber);
+0
+parseInt(firstNumber);
+NaN
+parseInt(firstNumber());
+1000
+function add(){
+var sum = 0;
+for(var i = 0; i< arguments.length; i++){
+if(typeof arguments[i] == 'function'){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(firstNumber, secondNumber);
+3000
+add(1,2,3,"Amit" , firstNumber, secondNumber);
+3006
+function adder(...arg){
+var sum = 0;
+for(var i =0; i<arg.length; i++){
+if(typeof arg[i] == 'function'){
+arg[i] = arg[i]();
+}
+sum+=isNaN(parseInt(arg[i]))?0: parseInt(arg[i]);
+}
+}
+undefined
+add(1,2,3,"Amit" , firstNumber, secondNumber);
+3006
