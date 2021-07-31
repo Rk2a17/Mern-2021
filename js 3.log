@@ -1,0 +1,283 @@
+function Calc(){
+var add = function(){
+console.log("I am Add")
+}
+}
+undefined
+calc();
+VM11486:1 Uncaught ReferenceError: calc is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM11486:1
+Calc();
+undefined
+add;
+VM11509:1 Uncaught ReferenceError: add is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM11509:1
+Calc;
+ƒ Calc(){
+var add = function(){
+console.log("I am Add")
+}
+}
+function Calc(){
+var add = function(){
+console.log("I am Add")
+}
+return add;
+}
+undefined
+var e = Calc();
+undefined
+e
+ƒ (){
+console.log("I am Add")
+}
+typeof e
+"function"
+e()
+VM11559:3 I am Add
+undefined
+function Calc(){
+var add = function(){
+console.log("I am Add")
+}
+var sbtract = function(){
+}
+return add;
+}
+undefined
+function Calc(){
+var add = function(){
+console.log("I am Add")
+}
+var subtract = function(){
+return 10000;
+}
+return [add, subtract];
+}
+undefined
+var e = Calc();
+undefined
+e;
+(2) [ƒ, ƒ]0: ƒ ()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM11772:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]1: ƒ ()length: 2[[Prototype]]: Array(0)
+typeof e
+"object"
+e instanceof Array
+true
+e[0]()
+VM11772:3 I am Add
+undefined
+e[1]()
+10000
+function show(){}
+undefined
+function Calc(){
+var add = function add(){
+console.log("I am Add")
+}
+var sub = function sub(){
+return 10000;
+}
+return [add, sub];
+}
+undefined
+var e = Calc()
+undefined
+e
+(2) [ƒ, ƒ]0: ƒ add()1: ƒ sub()arguments: nullcaller: nulllength: 0name: "sub"prototype: {constructor: ƒ}[[FunctionLocation]]: VM12028:5[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]length: 2[[Prototype]]: Array(0)
+var q = function test(){
+console.log("I am test")
+}
+undefined
+test;
+VM12183:1 Uncaught ReferenceError: test is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM12183:1
+funv
+VM12201:1 Uncaught ReferenceError: funv is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM12201:1
+function test2(){
+}
+undefined
+test2
+ƒ test2(){
+}
+q;
+ƒ test(){
+console.log("I am test")
+}
+q()
+VM12163:2 I am test
+undefined
+test1():
+function test1(){
+console.log("I am Test1")
+}
+VM12378:1 Uncaught SyntaxError: Unexpected token ':'
+test1();
+function test1(){
+console.log("I am Test1")
+}
+VM12385:3 I am Test1
+undefined
+var g = function test2(){
+console.log("I am test2")
+}
+undefined
+g();
+var g = function test2(){
+console.log("I am test2")
+}
+VM12474:2 I am test2
+undefined
+d();
+var d = function test3(){
+console.log("I am test 3")
+}
+VM12586:1 Uncaught TypeError: d is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM12586:1
+//Arrorw Function
+undefined
+var add = (a,b)=>a+b;
+undefined
+typeof add
+"function"
+add(10,20)
+30
+var add = (a,b)=>a||0+b||0;
+undefined
+add()
+0
+add(10);
+10
+var obj = null;
+undefined
+obj.a
+VM12935:1 Uncaught TypeError: Cannot read property 'a' of null
+    at <anonymous>:1:5
+(anonymous) @ VM12935:1
+if(obj!= null){
+console.log(obj.a);
+}
+else{console.log("It is a null")}
+VM13060:4 It is a null
+undefined
+if(obj){
+console.log("I am not Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13187:5 I am Falsy
+undefined
+obj
+null
+obj = undefined
+undefined
+if(obj){
+console.log("I am not Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13236:5 I am Falsy
+undefined
+obj = ''
+""
+if(obj){
+console.log("I am not Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13264:5 I am Falsy
+undefined
+obj = 0
+0
+if(obj){
+console.log("I am not Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13281:5 I am Falsy
+undefined
+obj = "amit"
+"amit"
+if(obj){
+console.log("I am not Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13303:2 I am not Truthy
+undefined
+if(obj){
+console.log("I am Truthy")
+}
+else{
+console.log("I am Falsy")}
+VM13321:2 I am Truthy
+undefined
+var a = undefined;
+undefined
+a?"Present": "Absent"
+"Absent"
+a||0
+0
+a;
+undefined
+a= 10;
+10
+a||0
+10
+var add = (a,b)=>(a||0+b||0);
+undefined
+var add = (a,b)=>(a||0)+(b||0);
+undefined
+add(10,39)
+49
+add()
+0
+var e ;
+undefined
+var eee;
+undefined
+typeof eee
+"undefined"
+var obj 11 = null;
+VM13816:1 Uncaught SyntaxError: Unexpected number
+var obj11 = null;
+undefined
+typeof obj11
+"object"
+obj11
+null
+var f = '';
+undefined
+typeof f
+"string"
+var add = (a=0,b=0)=>a+b;
+undefined
+add()
+0
+add(40,5)
+45
+var sum = (a,b=20,c,d=10)=>a+b+c+d;
+undefined
+sum(100, 200, 300)
+610
+var sum = (a,b=20,c=90,d=10)=>a+b+c+d;
+undefined
+sum(1)
+121
+var add = (a=0,b=0)=>{
+coms
+return a+b
+VM14224:3 Uncaught SyntaxError: Unexpected end of input
+var add = (a=0,b=0)=>{
+console.log("I am A "+a+" I am B "+b )
+return a+b
+}
+undefined
+add(10,20)
+VM14357:2 I am A 10 I am B 20
+30
